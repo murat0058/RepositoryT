@@ -1,5 +1,5 @@
-2012/10/07-03:56:38.098 22cc Recovering log #3
-2012/10/07-03:56:38.130 22cc Level-0 table #5: started
-2012/10/07-03:56:38.185 22cc Level-0 table #5: 33349 bytes OK
-2012/10/07-03:56:38.321 22cc Delete type=0 #3
-2012/10/07-03:56:38.322 22cc Delete type=3 #2
+2012/10/07-04:20:28.340 153c Recovering log #6
+2012/10/07-04:20:28.352 153c Level-0 table #8: started
+2012/10/07-04:20:28.400 153c Level-0 table #8: 7628 bytes OK
+2012/10/07-04:20:28.499 153c Delete type=0 #6
+2012/10/07-04:20:28.499 153c Delete type=3 #4

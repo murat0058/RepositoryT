@@ -2,7 +2,7 @@
 
 namespace RepoT.Infrastructure
 {
-    public class Disposable : IDisposable
+    public class CustomDisposable : IDisposable
     {
         private bool _isDisposed;
 
@@ -16,7 +16,7 @@ namespace RepoT.Infrastructure
 
         #endregion
 
-        ~Disposable()
+        ~CustomDisposable()
         {
             Dispose(false);
         }
