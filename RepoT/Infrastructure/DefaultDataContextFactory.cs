@@ -2,13 +2,13 @@
 
 namespace RepoT.Infrastructure
 {
-    public class DatabaseFactory<TContext> : CustomDisposable, IDatabaseFactory<TContext> where TContext : class, IDisposable, new()
+    public class DefaultDataContextFactory<TContext> : CustomDisposable, IDataContextFactory<TContext> where TContext : class, IDisposable, new()
     {
         private TContext _dataContext;
 
         #region IDatabaseFactory Members
 
-        public TContext Get()
+        public TContext GetContext()
         {
             return _dataContext ?? (_dataContext = new TContext());
         }

@@ -4,17 +4,17 @@ namespace RepoT.Infrastructure
 {
     public abstract class UnitOfWorkBase<TContext> : IUnitOfWork where TContext : class ,IDisposable
     {
-        private readonly IDatabaseFactory<TContext> _databaseFactory;
+        private readonly IDataContextFactory<TContext> _dataContextFactory;
         private TContext _dataContext;
 
-        protected UnitOfWorkBase(IDatabaseFactory<TContext> databaseFactory)
+        protected UnitOfWorkBase(IDataContextFactory<TContext> dataContextFactory)
         {
-            _databaseFactory = databaseFactory;
+            _dataContextFactory = dataContextFactory;
         }
 
         protected TContext DataContext
         {
-            get { return _dataContext ?? (_dataContext = _databaseFactory.Get()); }
+            get { return _dataContext ?? (_dataContext = _dataContextFactory.GetContext()); }
         }
 
         #region IUnitOfWork Members

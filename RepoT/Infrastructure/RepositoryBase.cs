@@ -6,16 +6,16 @@ namespace RepoT.Infrastructure
     {
         private TContext _dataContext;
 
-        protected RepositoryBase(IDatabaseFactory<TContext> databaseFactory)
+        protected RepositoryBase(IDataContextFactory<TContext> dataContextFactory)
         {
-            DatabaseFactory = databaseFactory;
+            DataContextFactory = dataContextFactory;
         }
 
-        protected IDatabaseFactory<TContext> DatabaseFactory { get; private set; }
+        protected IDataContextFactory<TContext> DataContextFactory { get; private set; }
 
         protected TContext DataContext
         {
-            get { return _dataContext ?? (_dataContext = DatabaseFactory.Get()); }
+            get { return _dataContext ?? (_dataContext = DataContextFactory.GetContext()); }
         }
     }
 }
