@@ -1,7 +1,0 @@
-<Modules>
-  <Module PersistentId="6798A666-9DA2-46B1-9F6F-B0B608A30861" ModuleId="RepoT" />
-  <Module PersistentId="CAEF3B60-5379-402A-9EF5-69B2E2BD781D" ModuleId="RepoT.EntityFramework" />
-  <Module PersistentId="85B056E5-DB79-43CE-8B8D-EC9E4F10312F" ModuleId="RepoT.RavenDb" />
-  <Module PersistentId="E70AF507-4E6A-4B67-9AEA-113E4DC22FB6" ModuleId="RepoT.EF.Console" />
-  <Module PersistentId="2F82C9F5-C8B1-46E9-AC35-882DC799B127" ModuleId="RepoT.RavenDb.Console" />
-</Modules>
