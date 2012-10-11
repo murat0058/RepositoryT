@@ -7,8 +7,8 @@
     <ProjectGuid>{6798A666-9DA2-46B1-9F6F-B0B608A30861}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RepoT</RootNamespace>
-    <AssemblyName>RepoT</AssemblyName>
+    <RootNamespace>RepositoryT</RootNamespace>
+    <AssemblyName>RepositoryT</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommitMode.cs" />
-    <Compile Include="Infrastructure\CustomDisposable.cs" />
     <Compile Include="Infrastructure\IDataContextFactory.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />

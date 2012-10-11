@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RepoT.Infrastructure
+namespace RepositoryT.Infrastructure
 {
     public interface IDataContextFactory<out TContext> : IDisposable where TContext : IDisposable
     {

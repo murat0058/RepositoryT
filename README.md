@@ -1,4 +1,4 @@
-RepoT
+RepositoryT
 =====
 
-Generic Repository Pattern base with UnitOfWork
+Generic Repository Pattern and UnitOfWork implementation with base classes. 

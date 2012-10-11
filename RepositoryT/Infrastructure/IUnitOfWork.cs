@@ -1,4 +1,4 @@
-﻿namespace RepoT.Infrastructure
+﻿namespace RepositoryT.Infrastructure
 {
     public interface IUnitOfWork
     {

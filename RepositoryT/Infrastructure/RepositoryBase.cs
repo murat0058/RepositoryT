@@ -1,6 +1,6 @@
 using System;
 
-namespace RepoT.Infrastructure
+namespace RepositoryT.Infrastructure
 {
     public abstract class RepositoryBase<TContext> where TContext : class,IDisposable
     {
