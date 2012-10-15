@@ -5,13 +5,12 @@ namespace RepositoryT.Infrastructure
     public abstract class RepositoryBase<TContext> where TContext : class,IDisposable
     {
         private TContext _dataContext;
+        protected IDataContextFactory<TContext> DataContextFactory { get; private set; }
 
         protected RepositoryBase(IDataContextFactory<TContext> dataContextFactory)
         {
             DataContextFactory = dataContextFactory;
         }
-
-        protected IDataContextFactory<TContext> DataContextFactory { get; private set; }
 
         protected TContext DataContext
         {
