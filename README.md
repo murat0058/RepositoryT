@@ -1,4 +1,4 @@
 RepositoryT
 =====
 
-Generic Repository Pattern and UnitOfWork implementation with base classes. 
+Generic Repository and UnitOfWork Pattern implementation with base classes. 
