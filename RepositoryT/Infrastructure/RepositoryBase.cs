@@ -4,17 +4,16 @@ namespace RepositoryT.Infrastructure
 {
     public abstract class RepositoryBase<TContext> where TContext : class,IDisposable
     {
-        private TContext _dataContext;
-        protected IDataContextFactory<TContext> DataContextFactory { get; private set; }
+        private readonly IDependencyResolverAdapter _resolver;
 
-        protected RepositoryBase(IDataContextFactory<TContext> dataContextFactory)
+        protected RepositoryBase(IDependencyResolverAdapter resolver)
         {
-            DataContextFactory = dataContextFactory;
+            _resolver = resolver;
         }
 
-        protected TContext DataContext
+        protected internal TContext DataContext
         {
-            get { return _dataContext ?? (_dataContext = DataContextFactory.GetContext()); }
+            get { return ((IDataContextFactory<TContext>)_resolver.GetService(typeof(IDataContextFactory<TContext>))).GetContext(); }
         }
     }
 }
