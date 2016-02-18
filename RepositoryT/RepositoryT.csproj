@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Infrastructure\IContextManager.cs" />
     <Compile Include="Infrastructure\IDataContextFactory.cs" />
-    <Compile Include="Infrastructure\IDependencyResolverAdapter.cs" />
+    <Compile Include="Infrastructure\IServiceLocator.cs" />
     <Compile Include="Extensions\IOrderable.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />

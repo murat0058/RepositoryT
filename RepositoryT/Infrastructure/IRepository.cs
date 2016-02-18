@@ -28,14 +28,11 @@ namespace RepositoryT.Infrastructure
         IQueryable<T> GetAllActive();
         IQueryable<T> GetAllDeleted();
 
-        IEnumerable<T> GetPaged(Expression<Func<T, bool>> predicate, Action<IOrderable<T>> order, int pageIndex,
-            int pageSize);
+        IEnumerable<T> GetPaged(Expression<Func<T, bool>> predicate, Action<IOrderable<T>> order, int pageIndex, int pageSize);
 
-        IEnumerable<T> GetPagedActive(Expression<Func<T, bool>> predicate, Action<IOrderable<T>> order, int pageIndex,
-            int pageSize);
+        IEnumerable<T> GetPagedActive(Expression<Func<T, bool>> predicate, Action<IOrderable<T>> order, int pageIndex, int pageSize);
 
-        IEnumerable<T> GetPagedDeleted(Expression<Func<T, bool>> predicate, Action<IOrderable<T>> order, int pageIndex,
-            int pageSize);
+        IEnumerable<T> GetPagedDeleted(Expression<Func<T, bool>> predicate, Action<IOrderable<T>> order, int pageIndex, int pageSize);
 
         IQueryable<T> IncludeSubSets(params Expression<Func<T, object>>[] includeProperties);
 

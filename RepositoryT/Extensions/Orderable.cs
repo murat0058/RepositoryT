@@ -12,7 +12,7 @@ namespace RepositoryT.Extensions
         {
             if (asQueryable == null)
             {
-                throw new ArgumentNullException("asQueryable");
+                throw new ArgumentNullException(nameof(asQueryable));
             }
 
             _queryable = asQueryable;
@@ -57,8 +57,7 @@ namespace RepositoryT.Extensions
             return this;
         }
 
-        public IOrderable<T> Desc<TKey1, TKey2>(Expression<Func<T, TKey1>> keySelector1,
-            Expression<Func<T, TKey2>> keySelector2)
+        public IOrderable<T> Desc<TKey1, TKey2>(Expression<Func<T, TKey1>> keySelector1, Expression<Func<T, TKey2>> keySelector2)
         {
             _queryable = _queryable
                 .OrderByDescending(keySelector1)
@@ -66,9 +65,7 @@ namespace RepositoryT.Extensions
             return this;
         }
 
-        public IOrderable<T> Desc<TKey1, TKey2, TKey3>(Expression<Func<T, TKey1>> keySelector1,
-            Expression<Func<T, TKey2>> keySelector2,
-            Expression<Func<T, TKey3>> keySelector3)
+        public IOrderable<T> Desc<TKey1, TKey2, TKey3>(Expression<Func<T, TKey1>> keySelector1, Expression<Func<T, TKey2>> keySelector2, Expression<Func<T, TKey3>> keySelector3)
         {
             _queryable = _queryable
                 .OrderByDescending(keySelector1)

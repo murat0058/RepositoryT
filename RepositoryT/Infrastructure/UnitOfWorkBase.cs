@@ -4,11 +4,11 @@ namespace RepositoryT.Infrastructure
 {
     public abstract class UnitOfWorkBase<TContext> : IUnitOfWork where TContext : class ,IDisposable
     {
-        private readonly IDependencyResolverAdapter _resolver;
+        private readonly IServiceLocator _serviceLocator;
 
-        protected UnitOfWorkBase(IDependencyResolverAdapter resolver)
+        protected UnitOfWorkBase(IServiceLocator serviceLocator)
         {
-            _resolver = resolver;
+            _serviceLocator = serviceLocator;
 
         }
 
@@ -16,11 +16,10 @@ namespace RepositoryT.Infrastructure
         {
             get
             {
-                var contextFactory = ((IDataContextFactory<TContext>)_resolver.GetService(typeof(IDataContextFactory<TContext>)));
+                var contextFactory = (IDataContextFactory<TContext>)_serviceLocator.GetService(typeof(IDataContextFactory<TContext>));
                 return contextFactory.GetContext();
             }
         }
-
 
         public abstract void Commit();
     }
