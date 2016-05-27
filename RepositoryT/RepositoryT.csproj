@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\IContextManager.cs" />
     <Compile Include="Infrastructure\IDataContextFactory.cs" />
     <Compile Include="Infrastructure\IServiceLocator.cs" />
     <Compile Include="Extensions\IOrderable.cs" />
